@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "es2017",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["prisma/seed.js"]
+}
