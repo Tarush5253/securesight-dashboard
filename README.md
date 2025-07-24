@@ -4,12 +4,12 @@ This project is a submission for the Fullstack Developer Intern technical assess
 
 ## 🚀 Live Demo
 
-[Deploy to Vercel](https://vercel.com/new/clone?repository-url=https://github.com/your-username/securesight-dashboard)
+[Deploy to Vercel](https://securesight-dashboard-ten.vercel.app/)
 
 ## 🛠 Tech Stack
 
 - **Framework**: Next.js 15 (App Router)
-- **Database**: SQLite with Prisma ORM
+- **Database**: postgresql with Prisma ORM
 - **Styling**: TailwindCSS
 - **Icons**: Lucide React
 - **Date Handling**: date-fns
@@ -25,6 +25,9 @@ This project is a submission for the Fullstack Developer Intern technical assess
 4. **Database Schema** - Camera and Incident models with proper relationships
 5. **API Routes** - GET incidents and PATCH resolve endpoints
 6. **Optimistic UI** - Smooth incident resolution with fade animations
+
+### Optional Features ✅
+1. **Interactive Timeline** - Under the player, draw an SVG/Canvas ruler for 24 h. Place incident markers, draggable scrubber.
 
 ### Database Models
 
@@ -59,7 +62,7 @@ model Incident {
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/your-username/securesight-dashboard.git
+   git clone https://github.com/Tarush5253/securesight-dashboard.git
    cd securesight-dashboard
    \`\`\`
 
@@ -75,11 +78,11 @@ model Incident {
 
 4. **Initialize the database**
    \`\`\`bash
-   # Generate Prisma client
-   npx prisma generate
+   # Create database and apply schema
+   npx prisma db push
    
-   # Create database and apply schema and Seed with sample data
-   npm run db:setup:fresh
+   # Seed with sample data
+   npx prisma db seed
    \`\`\`
 
 5. **Start the development server**
@@ -159,7 +162,7 @@ The application uses a custom dark theme matching the provided Figma design:
 ### Environment Variables for Production
 
 \`\`\`env
-DATABASE_URL="file:./dev.db"
+DATABASE_URL="prisma://user:password@endpoint.neon.tech/dbname?sslmode=require"
 \`\`\`
 
 ## 🧪 Development Commands
@@ -232,10 +235,6 @@ npm run db:studio    # Open Prisma Studio
 - **Animations**: Smooth transitions and micro-interactions
 - **Drag & Drop**: Reorder incidents or assign to different operators
 
-## 📝 License
-
-This project is created for educational purposes as part of a technical assessment.
-
 ---
 
-**Built with ❤️ for the SecureSight Technical Assessment**
+**Built with ❤️ by [Tarush](https://founder.freewaystudy.tech/)
